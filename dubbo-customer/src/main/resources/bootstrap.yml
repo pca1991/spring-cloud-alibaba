@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dubbo-customer
+  cloud:
+    nacos:
+      config:
+        username: nacos
+        password: nacos
+        context-path: /nacos
+        server-addr: 192.168.60.16:8848
+        namespace: f1e7f7fa-ca4e-4bec-b394-df6c86ea6807
+        file-extension: yml
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.60.16:8848
