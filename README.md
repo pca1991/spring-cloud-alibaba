@@ -1,8 +1,10 @@
 # spring-cloud-alibaba
 spring-cloud-alibaba
 
-springboot版本 2.2.12.RELEASE
+springboot 2.2.12.RELEASE
 
-dubbo版本 2.7.8
+dubbo 2.7.8
 
-nacos版本 1.4.1
+nacos 1.4.1
+
+springcloud Hoxton.SR9
