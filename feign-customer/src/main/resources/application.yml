@@ -9,3 +9,13 @@ spring:
         server-addr: 192.168.60.16:8848
         username: nacos
         password: nacos
+
+#开启hystrix
+feign:
+  hystrix:
+    enabled: true
+
+#开启feign调用日志
+logging:
+  level:
+    com.example.service: debug

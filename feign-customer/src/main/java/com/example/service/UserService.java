@@ -2,10 +2,11 @@ package com.example.service;
 
 import com.example.domain.CommonResult;
 import com.example.domain.User;
+import com.example.service.impl.UserFallbackService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(value = "feign-provider")
+@FeignClient(value = "feign-provider",fallback = UserFallbackService.class)
 public interface UserService {
     @PostMapping("/user/create")
     CommonResult create(@RequestBody User user);
