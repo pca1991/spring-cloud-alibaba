@@ -1,0 +1,23 @@
+server:
+  port: 8401
+spring:
+  application:
+    name: sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.60.16:8848 #配置Nacos地址
+        username: nacos
+        password: nacos
+    sentinel:
+      transport:
+        dashboard: 192.168.60.16:8081 #配置sentinel dashboard地址
+        port: 8719
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  sentinel:
+    enabled: true

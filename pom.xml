@@ -15,6 +15,7 @@
         <module>common-api</module>
         <module>feign-customer</module>
         <module>feign-provider</module>
+        <module>sentinel-service</module>
     </modules>
 
     <properties>
