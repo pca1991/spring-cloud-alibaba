@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: sentinel-service
+  profiles:
+    active: prod
+  cloud:
+    nacos:
+      config:
+        #dataId: ${prefix}-${spring.profiles.active}.${file-extension}
+        username: nacos
+        password: nacos
+        context-path: /nacos
+        server-addr: 192.168.60.16:8848
+        namespace: 7501d747-4498-4b1a-a1b4-a9aa5be68ab0
+        file-extension: yaml
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.60.16:8848

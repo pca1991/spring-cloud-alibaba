@@ -1,14 +1,7 @@
 server:
   port: 8401
 spring:
-  application:
-    name: sentinel-service
   cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.60.16:8848 #配置Nacos地址,注册中心
-        username: nacos
-        password: nacos
     sentinel:
       transport:
         dashboard: 192.168.60.16:8081 #配置sentinel dashboard地址
@@ -20,8 +13,8 @@ spring:
             server-addr: 192.168.60.16:8848
             username: nacos
             password: nacos
-            dataId: ${spring.application.name}-sentinel
-            groupId: DEFAULT_GROUP
+            dataId: ${spring.application.name}-flow-rules.json
+            groupId: SENTINEL_GROUP
             data-type: json
             rule-type: flow
 management:
