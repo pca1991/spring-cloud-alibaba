@@ -1,0 +1,11 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: demo
+
+mail:
+  name: qweqwe
+  address_new: adn
+  address_test: adt

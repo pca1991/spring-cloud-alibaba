@@ -1,8 +1,8 @@
-package com.example.service.impl;
+package com.example.impl;
 
 import com.example.config.User;
 import com.example.service.UserService;
-import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@DubboService
+@Service
 public class UserServiceImpl implements UserService {
     private List<User> userList;
 

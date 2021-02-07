@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.config;
 
 /**
  * Created by macro on 2019/8/29.

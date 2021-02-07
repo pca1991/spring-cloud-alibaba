@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.domain.User;
+import com.example.config.User;
 
 import java.util.List;
 

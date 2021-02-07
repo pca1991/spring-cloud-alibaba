@@ -1,7 +1,7 @@
 package com.example.service;
 
-import com.example.domain.CommonResult;
-import com.example.domain.User;
+import com.example.config.CommonResult;
+import com.example.config.User;
 import com.example.service.impl.UserFallbackService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;

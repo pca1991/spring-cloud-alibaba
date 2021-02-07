@@ -16,6 +16,7 @@
         <module>feign-customer</module>
         <module>feign-provider</module>
         <module>sentinel-service</module>
+        <module>swagger</module>
     </modules>
 
     <properties>

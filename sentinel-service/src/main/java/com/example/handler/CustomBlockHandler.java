@@ -1,7 +1,7 @@
 package com.example.handler;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.example.domain.CommonResult;
+import com.example.config.CommonResult;
 
 public class CustomBlockHandler {
     public static CommonResult handleException(BlockException exception){

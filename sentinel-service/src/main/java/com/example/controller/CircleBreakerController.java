@@ -1,8 +1,8 @@
 package com.example.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.example.domain.CommonResult;
-import com.example.domain.User;
+import com.example.config.CommonResult;
+import com.example.config.User;
 import com.example.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

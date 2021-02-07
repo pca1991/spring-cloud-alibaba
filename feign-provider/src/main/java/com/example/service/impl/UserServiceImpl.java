@@ -1,6 +1,6 @@
 package com.example.service.impl;
 
-import com.example.domain.User;
+import com.example.config.User;
 import com.example.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
