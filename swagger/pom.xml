@@ -52,6 +52,22 @@
 			<artifactId>knife4j-spring-boot-starter</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+		<!--SpringSecurity依赖配置-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.5.8</version>
+		</dependency>
+		<!--JWT(Json Web Token)登录支持-->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

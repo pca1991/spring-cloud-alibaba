@@ -1,4 +1,4 @@
-package com.example.impl;
+package com.example.service.impl;
 
 import com.example.config.User;
 import com.example.service.UserService;
