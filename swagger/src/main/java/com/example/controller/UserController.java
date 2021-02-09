@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +28,7 @@ public class UserController {
 
     @PostMapping("/create")
     @ApiOperation(value = "创建用户")
+    @PreAuthorize("hasAuthority('user:create')")
     public CommonResult create(@RequestBody User user) {
         userService.create(user);
         return new CommonResult("操作成功", 200);
