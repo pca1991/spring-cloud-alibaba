@@ -13,7 +13,10 @@ class SwaggerApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(passwordEncoder.encode("dj666"));
+		//$2a$10$pu8n57O5qIY06hlX4RfwMODQ.AkQYSkdod6ZlFJEAv3iR7pDXanwi
+		//$2a$10$yafGc09R2tg.PTd5tAF95emqvkVbrt2JuSoPLsptZGmB3ZJv7msye
+//		System.out.println(passwordEncoder.encode("dj666"));
+		System.out.println(passwordEncoder.matches("dj666","$2a$10$pu8n57O5qIY06hlX4RfwMODQ.AkQYSkdod6ZlFJEAv3iR7pDXanwi"));
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.example.exception.handler;
 
 import com.example.config.CommonResult;
+import com.example.exception.ApiException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -41,5 +42,12 @@ public class GlobalExceptionHandler {
         return CommonResult.validateFailed(sb.toString());
     }
 
-
+    @ResponseBody
+    @ExceptionHandler(value = ApiException.class)
+    public CommonResult handle(ApiException e) {
+        if (e.getErrorCode() != null) {
+            return CommonResult.failed(e.getErrorCode());
+        }
+        return CommonResult.failed(e.getMessage());
+    }
 }

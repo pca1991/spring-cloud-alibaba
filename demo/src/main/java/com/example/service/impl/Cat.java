@@ -3,7 +3,7 @@ package com.example.service.impl;
 import com.example.service.AnimalServie;
 import org.springframework.stereotype.Service;
 
-@Service(value = "cats")
+@Service(value = "cat")
 public class Cat implements AnimalServie {
     @Override
     public String getName() {

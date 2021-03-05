@@ -4,8 +4,11 @@ import com.example.fatory.AnimalFatory;
 import com.example.service.AnimalServie;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -24,7 +27,7 @@ class DemoApplicationTests {
 
 	@Test
 	void test() {
-		System.out.println(dog.getColor());
+
 	}
 
 
