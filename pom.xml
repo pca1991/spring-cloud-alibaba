@@ -18,6 +18,7 @@
         <module>sentinel-service</module>
         <module>swagger</module>
         <module>aop</module>
+        <module>mybatis-plus</module>
     </modules>
 
     <properties>
