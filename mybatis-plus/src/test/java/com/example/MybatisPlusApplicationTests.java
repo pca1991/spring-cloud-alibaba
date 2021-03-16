@@ -37,7 +37,7 @@ class MybatisPlusApplicationTests {
     void list() {
 		QueryWrapper<UmsAdmin> queryWrapper = new QueryWrapper<>();
 		Page<UmsAdmin> queryPage = new Page<>(1,3);
-        System.out.println(iUmsAdminService.page(queryPage,queryWrapper));
+        iUmsAdminService.page(queryPage,queryWrapper);
     }
 
     @Test
@@ -45,6 +45,6 @@ class MybatisPlusApplicationTests {
         QueryWrapper<UmsAdmin> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(UmsAdmin::getUsername,"qxu").like(UmsAdmin::getNickName,"许").select(UmsAdmin::getId,
                 UmsAdmin::getNickName,UmsAdmin::getUsername);
-        System.out.println(iUmsAdminService.getOne(queryWrapper));
+        iUmsAdminService.getOne(queryWrapper);
     }
 }

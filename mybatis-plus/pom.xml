@@ -34,6 +34,12 @@
 			<artifactId>mybatis-plus-generator</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+<!--		打印sql及耗时，有性能损耗，不建议生产环境使用。-->
+		<dependency>
+			<groupId>p6spy</groupId>
+			<artifactId>p6spy</artifactId>
+			<version>3.9.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
