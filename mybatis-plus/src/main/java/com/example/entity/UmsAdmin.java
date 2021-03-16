@@ -1,9 +1,13 @@
 package com.example.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -50,12 +54,14 @@ public class UmsAdmin implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
 
     /**
      * 最后登录时间
      */
-    private LocalDateTime loginTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private Date loginTime;
 
     /**
      * 帐号启用状态：0->禁用；1->启用

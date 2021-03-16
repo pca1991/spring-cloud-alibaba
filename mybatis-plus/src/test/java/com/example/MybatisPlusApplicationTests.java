@@ -1,6 +1,7 @@
 package com.example;
 
 
+import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.entity.UmsAdmin;
@@ -9,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @SpringBootTest
 class MybatisPlusApplicationTests {
@@ -19,17 +19,17 @@ class MybatisPlusApplicationTests {
 	@Test
 	void insert() {
 		UmsAdmin umsAdmin = new UmsAdmin();
-		umsAdmin.setUsername("666");
-		umsAdmin.setIcon("1111");
+		umsAdmin.setUsername("wo4");
+		umsAdmin.setIcon("good4");
 		iUmsAdminService.save(umsAdmin);
 	}
 
 	@Test
 	void update() {
 		UmsAdmin umsAdmin = new UmsAdmin();
-		umsAdmin.setId(8L);
-		umsAdmin.setUsername("444");
-		umsAdmin.setIcon("44444");
+		umsAdmin.setId(15L);
+		umsAdmin.setUsername("wo4");
+		umsAdmin.setIcon("goodgood");
 		iUmsAdminService.saveOrUpdate(umsAdmin);
 	}
 
@@ -45,6 +45,7 @@ class MybatisPlusApplicationTests {
         QueryWrapper<UmsAdmin> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(UmsAdmin::getUsername,"qxu").like(UmsAdmin::getNickName,"许").select(UmsAdmin::getId,
                 UmsAdmin::getNickName,UmsAdmin::getUsername);
-        iUmsAdminService.getOne(queryWrapper);
-    }
+		UmsAdmin umsAdmin = iUmsAdminService.getOne(queryWrapper);
+		System.out.println(umsAdmin.getCreateTime());
+	}
 }
